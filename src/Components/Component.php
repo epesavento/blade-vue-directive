@@ -41,7 +41,7 @@ abstract class Component
      * @param array $attributes
      * @return string
      */
-    public static function start(string $name, array $attributes = []) : string
+    public static function start($name, $attributes = [])
     {
         if (count(func_get_args()) > 2) {
             throw new Exception('Too many arguments passed to vue directive');
@@ -71,7 +71,7 @@ abstract class Component
      *
      * @return string
      */
-    protected function getEndTag() : string
+    protected function getEndTag()
     {
         return $this->element->getEndTag();
     }
@@ -81,7 +81,7 @@ abstract class Component
      *
      * @return string
      */
-    protected function getStartTag() : string
+    protected function getStartTag()
     {
         return $this->element->getStartTag();
     }
@@ -93,7 +93,7 @@ abstract class Component
      * @param mixed $value
      * @return array
      */
-    protected function resolveAttributeValue(string $name, $value) : array
+    protected function resolveAttributeValue($name, $value)
     {
         if (is_bool($value)) {
             return [":$name", $value ? 'true' : 'false'];
@@ -117,7 +117,7 @@ abstract class Component
      * @param mixed $value
      * @return $this
      */
-    protected function setAttribute(string $name, $value = null)
+    protected function setAttribute($name, $value = null)
     {
         list($name, $value) = $this->resolveAttributeValue($name, $value);
 
@@ -132,7 +132,7 @@ abstract class Component
      * @param array $attributes
      * @return $this
      */
-    protected function setAttributes(array $attributes)
+    protected function setAttributes($attributes)
     {
         foreach ($attributes as $name => $value) {
             $this->setAttribute($name, $value);

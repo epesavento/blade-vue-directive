@@ -23,7 +23,7 @@ class Element
      *
      * @param string $name
      */
-    public function __construct(string $name)
+    public function __construct($name)
     {
         $this->name = $name;
     }
@@ -33,7 +33,7 @@ class Element
      *
      * @return string
      */
-    public function getEndTag() : string
+    public function getEndTag()
     {
         return "</{$this->name}>";
     }
@@ -43,7 +43,7 @@ class Element
      *
      * @return string
      */
-    public function getStartTag() : string
+    public function getStartTag()
     {
         $attributes = $this->renderAttributes();
 
@@ -57,7 +57,7 @@ class Element
      * @param mixed $value
      * @return $this
      */
-    public function setAttribute(string $name, $value)
+    public function setAttribute($name, $value)
     {
         $this->attributes[$name] = $value;
 
@@ -71,7 +71,7 @@ class Element
      * @param mixed $value
      * @return string
      */
-    protected function buildAttribute(string $key, $value) : string
+    protected function buildAttribute($key, $value)
     {
         if (is_numeric($key)) {
             return $value;
@@ -89,7 +89,7 @@ class Element
      *
      * @return string
      */
-    protected function renderAttributes() : string
+    protected function renderAttributes()
     {
         return implode(' ', array_map(
             [$this, 'buildAttribute'],

@@ -9,7 +9,7 @@ class Basic
      *
      * @return string
      */
-    public static function end() : string
+    public static function end()
     {
         return '</div><?php echo \Jhoff\BladeVue\Components\Basic::end(); ?>';
     }
@@ -20,7 +20,7 @@ class Basic
      * @param string $expression
      * @return string
      */
-    public static function start(string $expression) : string
+    public static function start($expression)
     {
         return "<?php echo \Jhoff\BladeVue\Components\Basic::start($expression); ?><div>";
     }
