@@ -1,19 +1,10 @@
-Laravel Blade Vue Directive
+Laravel Blade Vue Directive Fork (PHP >= 5.6.4)
 ==============
 
 Laravel Blade Vue Directive provides blade directives for vue.js single file and inline template components.
 
-[![Latest Stable Version](https://img.shields.io/github/release/jhoff/blade-vue-directive.svg?style=flat-square)](https://packagist.org/packages/jhoff/blade-vue-directive)
-[![Total Downloads](https://img.shields.io/packagist/dt/jhoff/blade-vue-directive.svg?style=flat-square)](https://packagist.org/packages/jhoff/blade-vue-directive)
-[![MIT License](https://img.shields.io/packagist/l/jhoff/blade-vue-directive.svg?style=flat-square)](https://packagist.org/packages/jhoff/blade-vue-directive)
-[![Build Status](https://scrutinizer-ci.com/g/jhoff/blade-vue-directive/badges/build.png?b=master)](https://scrutinizer-ci.com/g/jhoff/blade-vue-directive/build-status/master)
-[![Code Coverage](https://scrutinizer-ci.com/g/jhoff/blade-vue-directive/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/jhoff/blade-vue-directive/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jhoff/blade-vue-directive/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jhoff/blade-vue-directive/?branch=master)
-
 <!-- MarkdownTOC autolink="true" autoanchor="true" bracket="round" -->
 
-- [Upgrade from 1.1.x to 2.0.0](#upgrade-from-11x-to-200)
-- [Installation](#installation)
 - [Usage](#usage)
     - [Basic Example](#basic-example)
     - [Scalars Example](#scalars-example)
@@ -24,25 +15,10 @@ Laravel Blade Vue Directive provides blade directives for vue.js single file and
 
 <!-- /MarkdownTOC -->
 
-<a id="upgrade-from-11x-to-200"></a>
-## Upgrade from 1.1.x to 2.0.0
+<a id="usage"></a>
+## Usage
 
-In 2.0, the `@vue` and `@endvue` directives have been renamed to `@inlinevue` and `@endinlinevue`. The new `@vue` and `@endvue` directives should now be used for non-inline components.
-
-**WARNING: You'll need to make sure that you run `php artisan view:clear` after upgrading**
-
-<a id="installation"></a>
-## Installation
-
-To install the Laravel Blade Vue Directive, simply run `composer require jhoff/blade-vue-directive` in a terminal, or if you prefer to manually install you can the following in your `composer.json` file and then run `composer install` from the terminal:
-
-```javascript
-{
-    "require": {
-        "jhoff/blade-vue-directive": "2.*"
-    }
-}
-```
+The Laravel Blade Vue Directive was written to be simple and intuitive to use. It's not opinionated about how you use your vue.js components. Simply provide a component name and (optionally) an associative array of properties.
 
 For Laravel 5.5 and later, the package will automatically register. If you're using Laravel before 5.5, then you need to add the provider to the providers array of `config/app.php`.
 
@@ -53,11 +29,6 @@ For Laravel 5.5 and later, the package will automatically register. If you're us
     // ...
   ],
 ```
-
-<a id="usage"></a>
-## Usage
-
-The Laravel Blade Vue Directive was written to be simple and intuitive to use. It's not opinionated about how you use your vue.js components. Simply provide a component name and (optionally) an associative array of properties.
 
 <a id="basic-example"></a>
 ### Basic Example
